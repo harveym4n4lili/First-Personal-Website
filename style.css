@@ -1,15 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Roboto+Mono:wght@600&family=Source+Code+Pro:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Quicksand:wght@300&family=Roboto+Mono:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Montserrat&family=Roboto+Mono:wght@600&family=Source+Code+Pro:wght@400;500&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: Bahnschrift Light;
+    letter-spacing: 1px;
+    line-height: 25px;
 }
 
 body{
-    background-color: rgb(34, 34, 34);
+    background-color: rgb(255, 255, 255);
 }
 
 .navigation nav{
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -22,52 +28,72 @@ body{
 }
 .navigation nav ul li a{
     text-decoration: none;
-    color: rgb(217, 217, 217) ;
+    font-weight:lighter;
+    color: rgb(32, 32, 32) ;
+    font-family: 'Roboto Mono', monospace;
     padding: 20px 20px;
     font-size: 16px;
+    font-weight: 900;
 }
 .navigation nav ul li a:hover{
-    color: rgb(235, 86, 86);
+    color: rgb(248, 38, 38);
  
 }
-
 .logo{
-    color: rgb(255, 255, 255);
+    color: rgb(32, 32, 32) ;
     text-decoration: none;
     font-size: 22px;
-    
+    font-family: 'DM Sans', sans-serif;
 } 
 .logo:hover{
-    color: rgb(255, 122, 122);
+    color: rgb(212, 212, 212);
 }
 
-.triangle-up {
-	width: 0;
-	height: 0;
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
-	border-top: 30px solid rgb(187, 187, 187);
+.maincontent{
+    background-color: rgb(245, 245, 245);
+    width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#AboutMePos{
-    padding-top: 25%;
-}
 .AboutMe{
-    background-color: rgb(32, 32, 32);
     color: white;
     display: flex;
-    justify-content: space-around;
-    padding-left: 15%;
-    padding-right: 15%;
 }
-.AboutMe p{
-    padding-left: 5%;
+.AboutMe .title{
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    text-decoration: underline;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(85, 85, 85);
 }
-#shape{
-    width: auto;
-    height: 200px;
+.AboutMe .intro{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: rgb(95, 95, 95);
+}
+.AboutMe .imagediv{
+    margin-top: auto;
+    margin-bottom: auto;
+
+    padding-left: 5%;
     padding-bottom: 2%;
     padding-top: 2%;
+}
+#IntroImage{
+
+    width: auto;
+    height: 150px;
+
+    border: 5px solid rgb(46, 46, 46);    
 }
