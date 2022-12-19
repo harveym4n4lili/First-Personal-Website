@@ -1,7 +1,6 @@
-let parallax = document.getElementsByClassName("parallax_layer");
-let article_parallax = document.getElementById("article_parallax");
+let parallaxbg = document.getElementById("aboutmebg");
 
 window.addEventListener("scroll",function(){
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = offset * 0.1 + "px";
+    var value = window.scrollY;
+    parallaxbg.style.top = value * 0.965 + 'px';
 })

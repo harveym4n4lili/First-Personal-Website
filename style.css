@@ -1,31 +1,43 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Roboto+Mono:wght@600&family=Source+Code+Pro:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Quicksand:wght@300&family=Roboto+Mono:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Montserrat&family=Roboto+Mono:wght@600&family=Source+Code+Pro:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Montserrat&family=Roboto+Mono:wght@600&family=Source+Code+Pro:wght@400;500&family=Varela+Round&display=swap');
 *{
     margin: 0;
     padding: 0;
     letter-spacing: 1px;
     line-height: 25px;
 }
-.parallax_wrapper{
-    height: 100vh;
-    overflow-y: auto;
+
+body{
     overflow-x: hidden;
-    
-  
-}
-.parallax_wrapper{
- 
-    height: 110%;
-    background-image: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.7)),url(AboutMeBackground.png);
-  
+    max-height: 2900px;
 }
 
+#aboutmebg {
+    position: absolute;
+    z-index: -1;
+    background-image:
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.75)),
+    url('AboutMeBackground.png');
+    margin-top: -3%;
+    width: 100%;
+    height: 110%;
+         
+    
+    
+    padding-left: 100%;
+}
+.navigation{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);;
+}
 .navigation nav{
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.8));
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -35,14 +47,16 @@
     display: inline-block;
     padding: 25px;
     animation: fadeIn 1.5s ease-in-out;
+  
 }
 .navigation nav ul li a{
     text-decoration: none;
     font-weight:lighter;
     color: rgb(32, 32, 32) ;
     font-family: 'Roboto Mono', monospace;
-    padding: 20px 20px;
-    font-size: 16px;
+    
+    font-size: 12px;
+    
     font-weight: 900;
 }
 .navigation nav ul li a:hover{
@@ -52,7 +66,7 @@
 .logo{
     color: rgb(32, 32, 32) ;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'DM Sans', sans-serif;
 } 
 .logo:hover{
@@ -60,55 +74,104 @@
 }
 
 .maincontent{
-    background-color: rgb(245, 245, 245);
-    width: 800px; 
-    height: 200px;
+    background-color: rgba(0, 0, 0, 0.75);
+    max-width: 750px;
+    height: 1200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100vh;
-    z-index: 5;
+    margin-top: 90vh;
+    border-radius: 25px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.5);
+    position: relative;
+    
 }
 
-.AboutMe{
+.NameSection{
     color: white;
     display: flex;
+    user-select: none;
     
-
 }
-.AboutMe .title{
-    padding-top: 5%;
-    padding-bottom: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
-
-    text-decoration: underline;
+.firstsection{
+    padding-top: 10%;
+    padding-left: 15%;
+    
+}
+#name{
+    width: 100%;
+    height: auto;
     letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(85, 85, 85);
+    font-family: 'Varela Round', sans-serif;
+   
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);;
+    transition: text-shadow 0.5s;
 }
-.AboutMe .intro{
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
+#name:hover{
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);;
+}
+#morename{
+    padding-top: 3%;
 
+    width: 100%;
+   
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-size: 15px;
-    color: rgb(95, 95, 95);
+    user-select: none;
+    color: rgba(255, 255, 255, 0.349);
 }
-.AboutMe .imagediv{
-    margin-top: auto;
-    margin-bottom: auto;
-
-    padding-left: 5%;
-    padding-bottom: 2%;
-    padding-top: 2%;
+.NameSection .imagediv{
+   padding-top: 5%;
+   padding-left: 5%;
+   justify-content: center;
 }
 #IntroImage{
-
     width: auto;
-    height: 150px;
-
+    height: 105px;
+    border-radius: 50%;
     border: 5px solid rgb(46, 46, 46);    
+    transition: height 0.2s;
+}
+
+
+.WorkSection{
+    padding-top: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.WorkSection h1{
+    padding-bottom: 2%;
+
+    font-family: 'Varela Round', sans-serif;
+    font-size: 150%;
+    color: rgba(255, 255, 255, 1);
+}
+.WorkSection p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.BioSection{
+    padding-top: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.BioSection h1{
+    padding-bottom: 2%;
+
+    font-family: 'Varela Round', sans-serif;
+    font-size: 150%;
+    color: rgba(255, 255, 255, 1);
+}
+.BioSection p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
 }
